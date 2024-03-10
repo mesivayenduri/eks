@@ -29,11 +29,9 @@ kubectl create configmap fluent-bit-cluster-info \
 
 
 
-```.bash
-kubectl get sa -n amazon-cloudwatch
-```
+> kubectl get sa -n amazon-cloudwatch
 
-kubectl describe sa fluent-bit -n amazon-cloudwatch
+> kubectl describe sa fluent-bit -n amazon-cloudwatch
 
 # To determine OIDC IssuerID
 cluster_name=px-npe2301
