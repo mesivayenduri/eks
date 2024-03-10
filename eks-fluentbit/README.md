@@ -13,7 +13,7 @@ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch
 
 Run the following command to create a ConfigMap named cluster-info with the cluster name and the Region to send logs to. Replace cluster-name and cluster-region with your cluster's name and Region.
 
-`ClusterName=px-npe2301
+```ClusterName=px-npe2301
 RegionName=us-east-1
 FluentBitHttpPort='2020'
 FluentBitReadFromHead='Off'
@@ -25,7 +25,7 @@ kubectl create configmap fluent-bit-cluster-info \
 --from-literal=http.port=${FluentBitHttpPort} \
 --from-literal=read.head=${FluentBitReadFromHead} \
 --from-literal=read.tail=${FluentBitReadFromTail} \
---from-literal=logs.region=${RegionName} -n amazon-cloudwatch`
+--from-literal=logs.region=${RegionName} -n amazon-cloudwatch```
 
 
 
