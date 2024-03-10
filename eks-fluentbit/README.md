@@ -29,7 +29,9 @@ kubectl create configmap fluent-bit-cluster-info \
 
 
 
+```.bash
 kubectl get sa -n amazon-cloudwatch
+```
 
 kubectl describe sa fluent-bit -n amazon-cloudwatch
 
