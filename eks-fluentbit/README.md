@@ -45,13 +45,19 @@ echo $oidc_id
 
 aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
 
-```
 eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster px-npe2301 --approve
+```
 
+# Create Kubernetes Service account with IAM policies Or Override kubernetes service account with IAM Policies
+```
 eksctl create iamserviceaccount --cluster px-npe2301 --namespace amazon-cloudwatch --name fluent-bit --attach-policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy --override-existing-serviceaccounts --approve
+```
 
-
+# To Delete EKS Cluster
+```
 eksctl delete cluster --name px-npe2301
+```
+
 
 
 
